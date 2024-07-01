@@ -1,7 +1,10 @@
+const { log } = require("console");
+const process = require("process");
+
 // This is our main function
-function fizzbuzz() {
+function fizzbuzz(maxRange) {
     // Put your code here...
-    for(let i=1; i<=300; i++) {
+    for(let i=1; i<=maxRange; i++) {
         //init message
         let message = [];
 
@@ -32,6 +35,15 @@ function fizzbuzz() {
     }
 }
 
-// Now, we run the main function:
-fizzbuzz();
+//parse user arguments
+function main() {
+    var maxRange = 100
+    if(process.argv.length > 2) {
+        maxRange = process.argv[2];
+    }
 
+    // Now, we run the main function:
+    fizzbuzz(maxRange=maxRange);
+}
+
+main();
