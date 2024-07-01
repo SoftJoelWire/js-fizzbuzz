@@ -28,7 +28,7 @@ function fizzbuzz(maxRange) {
         }
 
         //check for number case or merge array
-        if(message.length == 0) {message = i;} else {message = message.join("");}
+        message.length == 0 ? message = i : message = message.join("");
 
         //print message
         console.log(message);
@@ -37,9 +37,23 @@ function fizzbuzz(maxRange) {
 
 //parse user arguments
 function main() {
+
     var maxRange = 100
-    if(process.argv.length > 2) {
+
+
+    //check for user prompt
+    var argvLen = rocess.argv.length;
+    if(argvLen > 2) {
         maxRange = process.argv[2];
+
+        //check for rule options
+        //rules are true by default
+        //entering in specific rule argument will disable rule
+        if(argvLen > 3) {
+            for(let i=3; i<argvLen; i++) {
+                
+            }
+        }
     }
 
     // Now, we run the main function:
