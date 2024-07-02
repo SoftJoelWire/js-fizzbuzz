@@ -87,3 +87,16 @@ function main() {
 }
 
 main();
+
+
+/* 
+if user wants to add own custom rules then command line argument format may have to change
+i.e may need shell argument tags such as -Range num, -Conditionals num1 num2 num3 ..., -NewRule num string
+parsing the arguments would likely need to be abstracted to another function (or potentially parser class)
+
+from there would need iterate through all new rules added in fizzbuzz code:
+    for(num : newRules) { 
+        // log message if num condition is true
+    }
+may be difficult to let user have control over alphabetical/numerical order.
+*/
